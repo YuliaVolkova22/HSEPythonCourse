@@ -5,13 +5,11 @@ example2 = [-12, -11, -5, -404, -72]
 example3 = [1, 2, 9, 10, 12]
 
 def task3(l: List[int]) -> bool:
-    for i in range(len(l) - 1):
-        if l[i] < l[i + 1]:
-            continue
-        else:
-            return 'False'
+    for i in range(1, len(l)):
+        if l[i] <= l[i - 1]:
+            return False
         
-    return 'True'
+    return True
 
 # Примеры
  
